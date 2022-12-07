@@ -1,0 +1,72 @@
+# This file is responsible for configuring your application
+# and its dependencies with the aid of the Mix.Config module.
+#
+# This configuration file is loaded before any dependency and
+# is restricted to this project.
+
+# General application configuration
+use Mix.Config
+
+config :fruit_picker,
+  ecto_repos: [FruitPicker.Repo]
+
+# Configures the endpoint
+config :fruit_picker, FruitPickerWeb.Endpoint,
+  url: [host: "localhost"],
+  static_url: [host: "localhost"],
+  live_view: [signing_salt: "GRkuBfM3qVSoWUiDiAyvCrlnXtdtdI8c"],
+  secret_key_base: "IviZBYPZnRFF/YtqQT0QPqcVanoHGeQzFryWp+1rCO5fY+IKRm366qki9UbCXPHu",
+  render_errors: [view: FruitPickerWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: FruitPicker.PubSub, adapter: Phoenix.PubSub.PG2]
+
+config :fruit_picker, FruitPicker.Repo, log: false
+
+# Configures Elixir's Logger
+config :logger, :console,
+  format: "$time $metadata[$level] $message\n",
+  backends: [:console],
+  metadata: [:request_id]
+
+# Use Jason for JSON parsing in Phoenix
+config :phoenix, :json_library, Jason
+
+config :phoenix, :template_engines,
+  slim: PhoenixSlime.Engine,
+  slime: PhoenixSlime.Engine
+
+config :ueberauth, Ueberauth,
+  providers: [
+    identity:
+      {Ueberauth.Strategy.Identity,
+       [
+         callback_methods: ["POST"],
+         request_path: "/signin",
+         callback_path: "/signin"
+       ]}
+  ]
+
+config :brady,
+  otp_app: :fruit_picker,
+  svg_path: "priv/static/images"
+
+config :scrivener_html,
+  routes_helper: FruitPicker.Router.Helpers,
+  view_style: :bulma
+
+config :sentry,
+  dsn: System.get_env("SENTRY_DSN"),
+  included_environments: [:prod],
+  enable_source_code_context: true,
+  root_source_code_path: File.cwd!(),
+  tags: %{
+    environment: System.get_env("SENTRY_ENV_NAME") || "N/A",
+    heroku_release_version: System.get_env("HEROKU_RELEASE_VERSION"),
+    heroku_release_created_at: System.get_env("HEROKU_RELEASE_CREATED_AT"),
+    heroku_slug_commit: System.get_env("HEROKU_SLUG_COMMIT")
+  }
+
+config :stripity_stripe, api_key: System.get_env("STRIPE_SECRET_KEY")
+
+# Import environment specific config. This must remain at the bottom
+# of this file so it overrides the configuration defined above.
+import_config "#{Mix.env()}.exs"

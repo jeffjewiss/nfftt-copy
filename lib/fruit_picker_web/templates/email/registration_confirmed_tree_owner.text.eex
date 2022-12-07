@@ -1,0 +1,17 @@
+Hi <%= @person.first_name %>,
+
+Thank you so much for registering your fruit tree with Not Far From The Tree! We’re so grateful to you for opening up your yard and welcoming our team to harvest and share your fruit with the community.
+
+Please review your Tree Owner Welcome Package, <"https://fruit.nyc3.digitaloceanspaces.com/assets/Handbooks/Tree%20Registrant%20Welcome%20Package%202022.pdf"> for more information about our program, to learn more about your impact, navigating the picking process and prepration, accessing resources on Tree health and care, and more!
+
+To schedule a pick for your tree(s), please visit your profile on our fruit picking portal, <"https://portal.notfarfromthetree.org/profile"> update any necessary information on your tree profile, and request a pick in an according to your fruits ripening. Not sure when your fruit is ripe and ready for picking? Check out our Fruit ripening guide here. <"https://notfarfromthetree.org/fruit/sweet-cherries/">
+
+Remember that your NFFTT membership also gives you access to sweet discounts at local sustainable businesses including nurseries, breweries, bike shops and tool shares, book stores, resturants, bulk stores, and more! See the full list of your membership perks https://notfarfromthetree.org/tree-harvest/
+
+Present your NFFTT Team digital membership card <"https://drive.google.com/open?id=1tYWwSFpom2qslwR3ghMLb_opPF9UG9LT"> at all participating businesses to save on products and services you love!
+
+Thank you for supporting Not Far From The Tree – we’re looking forward to a wonderful fruit season together!
+
+Fruitfully yours,
+
+The NFFTT Team

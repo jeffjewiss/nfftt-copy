@@ -1,0 +1,15 @@
+Hi <%= @person.first_name %>,
+
+Congratulations! You are now registered as a Fruit Picker member with Not Far From The Tree! Thank you so much for helping pick and share fruit with your community this season! By registering as a member, you’re helping sustain the urban orchard, building community, and bringing more fresh fruit to social service agencies across Toronto.
+
+Check out your go to Fruit Picker Handbook! <"https://fruit.nyc3.digitaloceanspaces.com/assets/Handbooks/Fruit%20Picker%20Handbook%202022.pdf"> This includes all the information you'll need to know about picking as a NFFTT Team memeber. Throughout the season make sure to regularly log in and check the fruit picking Portal <"https://portal.notfarfromthetree.org/profile">. as well as your email, to claim fruit picks as they are scheduled!
+
+Remember that your NFFTT membership also gives you access to sweet discounts at local sustainable businesses including nurseries, breweries, bike shops and tool shares, book stores, resturants, bulk stores, and more! See the full list of your membership perks here! <"https://nfftt.wpengine.com/get-involved/fruit-pickers/">
+
+Present your NFFTT Team digital membership card <"https://drive.google.com/open?id=1tYWwSFpom2qslwR3ghMLb_opPF9UG9LT"> at all participating businesses to save on products and services you love!
+
+Thank you for joining the Not Far From The Tree Team – we’re looking forward to a wonderful fruit harvesting season together!
+
+Fruitfully yours,
+
+The NFFTT Team

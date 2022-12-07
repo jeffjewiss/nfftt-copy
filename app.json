@@ -1,0 +1,56 @@
+{
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git"
+    },
+    {
+      "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static.git"
+    }
+  ],
+  "environments": {
+    "test": {
+      "addons": [
+        "heroku-postgresql:in-dyno"
+      ]
+    }
+  },
+  "env": {
+    "HEROKU_APP_ID": {
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "HEROKU_RELEASE_CREATED_AT": {
+      "required": false
+    },
+    "HEROKU_RELEASE_VERSION": {
+      "required": false
+    },
+    "HEROKU_SLUG_COMMIT": {
+      "required": false
+    },
+    "HEROKU_SLUG_DESCRIPTION": {
+      "required": false
+    },
+    "POOL_SIZE": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "fruit-picker",
+  "scripts": {
+    "postdeploy": "mix ecto.pr"
+  },
+  "stack": "heroku-18"
+}
