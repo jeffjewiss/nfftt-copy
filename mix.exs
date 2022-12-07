@@ -44,7 +44,7 @@ defmodule FruitPicker.MixProject do
   defp deps do
     [
       {:arc_ecto, "~> 0.11"},
-      {:argon2_elixir, "~> 2.0"},
+      {:argon2_elixir, "~> 3.0"},
       {:bamboo, "~> 1.2"},
       {:brady, "~> 0.0.7"},
       {:comeonin, "~> 5.0"},
